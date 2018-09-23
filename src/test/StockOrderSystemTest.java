@@ -19,7 +19,7 @@ import main.java.com.stockordersexecution.service.impl.StockOrderExecutorService
 public class StockOrderSystemTest {
 	StockOrderExecutorService stockOrderExecutorService = new StockOrderExecutorServiceImpl(); // MyClass is tested
 	@Test
-    public void testReadingFromCSV() {
+	public void testReadingFromCSV() {
 		List < String > stockOrders = new ArrayList < > ();
 		List < String > stockOrdersExpected = new ArrayList < > ();
 		List < StockOrder > expectedStockOrders = new ArrayList < > ();
@@ -51,8 +51,8 @@ public class StockOrderSystemTest {
 		} catch (StockOrderExecutorException stockOrderExecutorException) {
 			System.out.println(stockOrderExecutorException.getMessage());
 		}
-		
-    }
+
+	}
 
 	@Test
 	public void testAggregateStockOrder() {
@@ -68,7 +68,7 @@ public class StockOrderSystemTest {
 					+ "}";
 			expectedAggregatedList.add(order);
 		}
-		
+
 		Map<String, OrderDetails> aggregatedMap = stockOrderExecutorService.aggreagateStockOrder(stockOrders);
 		for(String key : aggregatedMap.keySet()) {
 			String order = "{"
@@ -80,7 +80,7 @@ public class StockOrderSystemTest {
 		}
 		assertEquals(expectedAggregatedList, aggregatedList);
 	}
-	
+
 	@Test
 	public void testExecuteStockOrder() {
 		List<StockOrder> stockOrderList = null;
@@ -116,7 +116,7 @@ public class StockOrderSystemTest {
 		}
 		assertEquals(executedList, expectedList);
 	}
-	
+
 	private List<StockOrderResult> getExpectedStockOrderResultList() {
 		List<StockOrderResult> stockOrderResultList = new ArrayList<StockOrderResult>();
 		StockOrderResult stockOrderResult1 = new StockOrderResult() {
@@ -190,7 +190,7 @@ public class StockOrderSystemTest {
 		aggregateMap.put("ABC", orderDetails1);
 		aggregateMap.put("XYZ", orderDetails2);
 		return aggregateMap;
-		
+
 	}
 	private List<StockOrder> getExpectedStockOrders() {
 		List < StockOrder > expectedStockOrders = new ArrayList < > ();
