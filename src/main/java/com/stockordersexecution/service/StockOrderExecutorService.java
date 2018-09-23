@@ -3,7 +3,7 @@ package main.java.com.stockordersexecution.service;
 import java.util.List;
 import java.util.Map;
 
-import main.java.com.stockorderexecution.exception.StockOrderExecutorException;
+import main.java.com.stockordersexecution.exception.StockOrderExecutorException;
 import main.java.com.stockordersexecution.model.OrderDetails;
 import main.java.com.stockordersexecution.model.StockOrder;
 import main.java.com.stockordersexecution.model.StockOrderResult;

@@ -1,4 +1,4 @@
-package main.java.com.stockorderexecution.exception;
+package main.java.com.stockordersexecution.exception;
 
 public class StockOrderExecutorException extends Exception{
 
